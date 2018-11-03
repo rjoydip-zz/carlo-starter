@@ -5,8 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "pack": "pkg package.json --out-path build",
-    "launch": "node scripts/launch.js"
+    "pack:dev": "cross-env DEV=true pkg package.json --out-path build",
+    "pack:prod": "cross-env DEV=false pkg package.json --out-path build",
+    "launch:dev": "cross-env DEV=true node scripts/launch.js",
+    "launch:prod": "cross-env DEV=false node scripts/launch.js"
   },
   "bin": {
     "carlo-starter": "main.js"
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "chalk": "^2.4.1",
+    "cross-env": "^5.2.0",
     "pkg": "^4.3.4",
     "shelljs": "^0.8.2"
   }

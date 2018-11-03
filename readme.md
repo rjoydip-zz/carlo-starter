@@ -25,13 +25,13 @@ $ npm start
 ### Package project to executable
 
 ```
-$ npm run pack
+$ npm run pack:<dev|prod>
 ```
 
 ### Launch your application
 
 ```
-$ npm run launch
+$ npm run launch:<dev|prod>
 ```
 
 ## License
