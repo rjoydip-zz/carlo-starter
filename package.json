@@ -1,0 +1,33 @@
+{
+  "name": "carlo-starter",
+  "version": "1.0.0",
+  "description": "Carlo - headful Node app starter",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "pack": "pkg package.json --out-path build",
+    "launch": "node scripts/launch.js"
+  },
+  "bin": {
+    "carlo-starter": "main.js"
+  },
+  "pkg": {
+    "scripts": "['*.js', '!scripts']",
+    "assets": "www/**/*"
+  },
+  "keywords": [
+    "carlo",
+    "starter"
+  ],
+  "author": "rjoydip <joydipand@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "carlo": "^0.9.10",
+    "console-clear": "^1.1.1"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "pkg": "^4.3.4",
+    "shelljs": "^0.8.2"
+  }
+}
