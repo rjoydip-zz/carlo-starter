@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Carlo - headful Node app starter",
   "main": "main.js",
+  "engines": {
+    "node": ">=7.6.0"
+  },
   "scripts": {
     "start": "node main.js",
     "pack:dev": "cross-env DEV=true pkg package.json --out-path build",
