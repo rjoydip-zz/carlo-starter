@@ -7,7 +7,7 @@
     "node": ">=7.6.0"
   },
   "scripts": {
-    "start": "node main.js",
+    "start": "cross-env DEV=true node scripts/watcher.js",
     "pack:dev": "cross-env DEV=true pkg package.json --out-path build",
     "pack:prod": "cross-env DEV=false pkg package.json --out-path build",
     "launch:dev": "cross-env DEV=true node scripts/launch.js",
@@ -33,7 +33,11 @@
   "devDependencies": {
     "chalk": "^2.4.1",
     "cross-env": "^5.2.0",
+    "nodemon": "^1.18.5",
     "pkg": "^4.3.4",
     "shelljs": "^0.8.2"
+  },
+  "nodemonConfig": {
+    "ignore": ["build/*", "www/*", "scripts/*"]
   }
 }

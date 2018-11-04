@@ -21,7 +21,7 @@ rm('-rf', buildPath);
 process.env.DEV === 'true' ? exec('npm run pack:dev'): exec('npm run pack:prod');
 
 function launch() {
-    clear(true);
+    clear();
     echo(chalk.blue('Launching app ...\n'));
 }
 
