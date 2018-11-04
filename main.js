@@ -5,12 +5,15 @@ const carlo = require('carlo');
 (async () => {
   // Launch the browser.
   const app = await carlo.launch({
-    bgcolor: '#c5cbe8',
+    bgcolor: '#21222c',
     width: 500,
     height: 500,
     userDataDir: join(homedir(), '.carlo-stater'),
     args: process.env.DEV === 'true' ? ['--auto-open-devtools-for-tabs'] : []
   });
+  
+  // app event
+  app.on('exit', () => process.exit());
   
   // Tell carlo where your web files are located.
   await app.serveFolder(join(__dirname, 'www'));
@@ -21,7 +24,4 @@ const carlo = require('carlo');
   
   // Navigate to the main page of your app.
   await app.load('index.html');
-
-  // app event
-  app.on('exit', () => process.exit());
 })();
